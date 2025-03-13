@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>alraqi-tv</title>
-    <link rel="icon" href=""/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-        }
+    <title>My Angular App</title>
 
-        .jwplayer {
-            position: absolute !important;
-        }
+    <!-- مكتبة Sentry لمراقبة الأخطاء -->
+    <script src="https://browser.sentry-cdn.com/5.11.1/bundle.min.js"
+        integrity="sha384-r7/ZcDRYpwjCNXLUKK3iuyyyEcDJ+o+3M5COXP5GUGODYbolXewNHAZLY33ZHCV"
+        crossorigin="anonymous"></script>
 
-        .jwplayer.jw-flag-aspect-mode {
-            min-height: 100%;
-            max-height: 100%;
-        }
+    <script src="https://browser.sentry-cdn.com/5.11.1/captureconsole.min.js"></script>
 
-        .jw-logo-container {
-            position: absolute;
-            top: 2%;
-            right: 55%;
-        }
-    </style>
-</head>
-<body>
-    <div id="jwplayerDiv"></div>
-    <script src="//libraries.alraqi-tv.com/jwplayer.js"></script>
+    <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
-        // إعداد مشغل JWPlayer مع الرابط الجديد
-        jwplayer("jwplayerDiv").setup({
-            file: "http://stream.mytvplus.net:7002/sport/ch1/adaptive.m3u8",
-            position: 'bottom',
-            autostart: true,
-            stretching: "",
-            width: "100%",
-            type: "hls",
-            volume: "100",
-            mute: false,
-            pipIcon: "true",
-            castIcon: "true",
-            title: "",
-            logo: {
-                file: "",
-                hide: false,
-                position: "bottom-right",
-                margin: "150",
-                height: "25"
-            }
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0];
+            k.async = 1;
+            k.src = r;
+            a.parentNode.insertBefore(k, a);
+        })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(12345678, "init", { // ضع ID الحساب هنا
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
         });
     </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/12345678" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- تحميل ملفات CSS -->
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+</head>
+
+<body>
+
+    <app-root></app-root>
+
+    <!-- تحميل ملفات JavaScript الخاصة بالموقع -->
+    <script src="runtime.7d9d467.js" defer></script>
+    <script src="polyfills-es5.6252cd0.js" nomodule defer></script>
+    <script src="polyfills.521d42a.js" defer></script>
+    <script src="scripts.99ccb32.js" defer></script>
+    <script src="main.04b9689.js" defer></script>
+
+    <!-- iFrame لأداة الدعم -->
+    <iframe data-product="web_widget" title="No content" role="presentation"
+        tabindex="-1" allow="microphone *" aria-hidden="true"
+        src="about:blank"
+        style="width: 100px; height: 8px; border: 0px; position: absolute; top: -9999px;">
+    </iframe>
+
 </body>
+
 </html>
